@@ -19,7 +19,8 @@
 - `php bin/console make:migration`
 - `php bin/console doctrine:migrations:migrate`
 
-```src/DataFixtures/AppFixtures.php
+```php
+// src/DataFixtures/AppFixtures.php
         $plat = new Plat();
         $plat->setNom('Foie Gras');
         $plat->setDescription("Il est de toutes les tables pour les fêtes de fin d’année. Même si le monde associe cette spécialité à la France, la tradition du gavage d’oie remonte à l’Antiquité. Sur un pain brioché avec un peu de confit d’oignons ou de la confiture de figue, vous dégusterez le foie gras de façon idéale.");
@@ -32,13 +33,17 @@
 - `git remote set-url origin https://github.com/quatrecouleurs/install_symphony.git`
 - `git branch -M main`
 - creating a git access token
-- `git push -u origin main`
+- `git push -u origin main`s
+
+# Bootstrap via Webpack Encore / nodejs
+
 - `git checkout -b bootstrap_install`
 - `composer require symfony/webpack-encore-bundle`
 - `npm install`
 - `npm install -g npm@8.5.3`
 
-```webpack.config.js
+```js
+// webpack.config.js
     // enables Sass/SCSS support
     .enableSassLoader();
 ```
@@ -48,7 +53,8 @@
 - `npm install sass-loader@^12.0.0 sass --save-dev`
 - `npm run watch`
 
-```templates/base.html.twig
+```s
+{#templates/base.html.twig#}
         {% block stylesheets %}
             {# 'app' must match the first argument to addEntry() in webpack.config.js #}
             {{ encore_entry_link_tags('app') }}
@@ -68,9 +74,12 @@
 
 - `npm install bootstrap --save-dev`
 
-```assets/styles/app.css
+```css
+/*assets/styles/app.css*/
 @import "~bootstrap/scss/bootstrap";
 ```
 
 - `git commit -a`
-- `
+- `git checkout -b installing_menu`
+
+# Dynamic menu via KnpMenuBundle
