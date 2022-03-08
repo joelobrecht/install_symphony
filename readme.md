@@ -1,5 +1,7 @@
 # Travaux effectués
 
+5è tentative, en espérant ne pas casser l'installation cette fois.
+
 # Installation
 
 - New container
@@ -81,5 +83,26 @@
 
 - `git commit -a`
 - `git checkout -b installing_menu`
+- Test de Bootstrap en ajoutant quelques classes aux tables
 
-# Dynamic menu via KnpMenuBundle
+- Ajout de jquery
+- `npm install jquery --save-dev`
+
+```js
+// loads the jquery package from node_modules
+
+import $ from "jquery";
+
+// import the function from greet.js (the .js extension is optional)
+// ./ (or ../) means to look for a local file
+
+import greet from "./greet";
+
+$(document).ready(function () {
+  $("body").prepend("<h1>" + greet("jill") + "</h1>");
+});
+```
+
+# Dynamic menu trying to navigate in categories
+
+- `composer require --dev symfony/var-dumper`

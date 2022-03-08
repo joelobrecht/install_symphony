@@ -17,7 +17,10 @@ class PlatController extends AbstractController
     #[Route('/', name: 'plat_index', methods: ['GET'])]
     public function index(PlatRepository $platRepository): Response
     {
+        //dd($platRepository->findAll());
+
         return $this->render('plat/index.html.twig', [
+
             'plats' => $platRepository->findAll(),
         ]);
     }
@@ -71,7 +74,7 @@ class PlatController extends AbstractController
     #[Route('/{id}', name: 'plat_delete', methods: ['POST'])]
     public function delete(Request $request, Plat $plat, EntityManagerInterface $entityManager): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$plat->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $plat->getId(), $request->request->get('_token'))) {
             $entityManager->remove($plat);
             $entityManager->flush();
         }
