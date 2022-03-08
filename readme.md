@@ -48,7 +48,7 @@
 - `npm install sass-loader@^12.0.0 sass --save-dev`
 - `npm run watch`
 
-````templates/base.html.twig
+```templates/base.html.twig
         {% block stylesheets %}
             {# 'app' must match the first argument to addEntry() in webpack.config.js #}
             {{ encore_entry_link_tags('app') }}
@@ -63,13 +63,14 @@
                 <script src="/build/runtime.js" defer></script>
                 <script src="/build/app.js" defer></script>
                 See note below about the "defer" attribute -->
-        {% endblock %}
+        {% endblock %
+```
 
 - `npm install bootstrap --save-dev`
 
 ```assets/styles/app.css
 @import "~bootstrap/scss/bootstrap";
-````
+```
 
 - `git commit -a`
 - `
