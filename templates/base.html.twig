@@ -19,6 +19,7 @@
 {% for plat in plats %}
 <a class="nav-item nav-link" href="{{ path('plat_show', {'id': plat.id}) }}">{{ plat.nom }}</a>
 {% endfor %}
+{# {{ dump(uuid.listePlats())}} #}
 </nav>
 
     </header>

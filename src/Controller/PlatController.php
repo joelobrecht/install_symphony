@@ -17,7 +17,7 @@ class PlatController extends AbstractController
     #[Route('/', name: 'plat_index', methods: ['GET'])]
     public function index(PlatRepository $platRepository): Response
     {
-        //dd($platRepository->findAll());
+        //dd($platRepository);
 
         return $this->render('plat/index.html.twig', [
 
@@ -31,6 +31,7 @@ class PlatController extends AbstractController
         $plat = new Plat();
         $form = $this->createForm(PlatType::class, $plat);
         $form->handleRequest($request);
+
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->persist($plat);

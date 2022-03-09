@@ -106,3 +106,10 @@ $(document).ready(function () {
 # Dynamic menu trying to navigate in categories
 
 - `composer require --dev symfony/var-dumper`
+- `mkdir src/Service`
+- `touch src/Service/MenuPlats.php`
+
+```php
+// Menuplats.php
+
+```
