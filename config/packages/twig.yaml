@@ -1,6 +1,9 @@
+# config/packages/twig.yaml
 twig:
-    default_path: '%kernel.project_dir%/templates'
-
+  default_path: "%kernel.project_dir%/templates"
+  globals:
+    # Joel Service
+    uuid: '@App\Service\MenuPlats'
 when@test:
-    twig:
-        strict_variables: true
+  twig:
+    strict_variables: true
